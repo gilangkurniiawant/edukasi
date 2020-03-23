@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bayar Saat Barang Diterima & Gratis Ongkir</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <meta property="og:image" content="fb-og-image.jpg" />
+  <meta property="og:title" content="I Want You To Be My Lover" />
+  <meta property="og:description" content="I Am Alone And Need A New Lover" />
+  <style>
+    body {
+      background-image: url("background.jpg");
+      width: 100%;
+      height: auto;
+      background-size: contain;
+      background-position: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="rows">
+    <center>
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <button type="button" id="wow" class="btn btn-info btn-lg btn-block" style="margin: 40% auto">
+          CLICK HERE TO CONTINUE
+        </button>
+      </div>
+      <div class="col-md-2"></div>
+    </center>
+  </div>
+</body>
+<script src="jquery-3.4.1.js"></script>
+<script src="js.js"></script>
+
+<script>
+  $("#wow").click(function () {
+    var target = atob(get_link());
+    window.location = target;
+  });
+
+  function gup(name, url) {
+    if (!url) url = location.href;
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regexS = "[\\?&]" + name + "=([^&#]*)";
+    var regex = new RegExp(regexS);
+    var results = regex.exec(url);
+    return results == null ? null : results[1];
+  }
+</script>
+
+</html>
