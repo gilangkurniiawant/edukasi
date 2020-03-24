@@ -38,9 +38,19 @@
 
 <script>
   $("#wow").click(function () {
+    var base = window.location.href;
+    var direc = base + "/?fbclid='ok'";
     var target = atob(get_link());
-    window.location = target;
+    var res = gup("fbclid", base);
+    var res2 = gup("fbclids", base);
+
+    if (res != null || res2 != null) {
+      window.location = target;
+    } else {
+      window.location = direc;
+    }
   });
+
 
   function gup(name, url) {
     if (!url) url = location.href;
